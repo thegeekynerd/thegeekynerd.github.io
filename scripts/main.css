@@ -1,0 +1,120 @@
+
+*{
+    box-sizing: border-box;
+}
+html, body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    text-align: center;
+}
+img{
+    display: block;
+    height:auto;
+    width:100%;
+}
+
+.btn
+{
+    display: inline-block;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: grey;
+    box-shadow: blanchedalmond;
+}
+
+#showcase{
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+#showcase .bg-image{
+    position: absolute;
+    background-image: url('/assets/home.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+#showcase .content-wrap{
+    width: 100%;
+    position: absolute;
+    top:35%;
+    left: 50%;
+    transform: translate(-50%, -50%) 
+}
+
+#showcase .btn{
+    /* padding: 1rem 0.7rem 1rem 0.7rem; */
+    font-size: 20px;
+}
+
+.cards{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    margin:10px;
+    padding: 10px;
+    width: 75%;
+    box-shadow: 1px 4px 8px 1px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1; */
+}
+
+.card:hover{
+    box-shadow: 2px 8px 16px 2px rgba(0,0,0,0.2);
+}
+
+footer{
+    background-color: grey;
+    color: white;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width:768px){
+    .content-wrap h2{
+        font-size: 48px;
+    }
+    .grid{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr minmax(auto, 1fr) 1fr;
+        justify-content: space-evenly;
+        align-content: center;
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+        align-items: center;
+    }
+    .card{
+        width: 90%;
+    }
+
+    .footer-end{
+        grid-column: 2/4;
+    }
+}
