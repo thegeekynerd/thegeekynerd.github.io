@@ -4,6 +4,14 @@
 
 $(document).ready(function(){
     $('.card').on('click ', function() {
-        window.location.href="construction.html"
+        id=this.id
+        if(id=='about')
+            window.location.href=`${id}.html`
+        else
+            window.location.href="construction.html"
+    });
+
+    $('.menu').click(function() {
+        $("#menuitems").toggleClass('sm-menuitems')
     });
 })
